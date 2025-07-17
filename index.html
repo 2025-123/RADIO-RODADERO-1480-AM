@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0077be" />
   <title>Radio Rodadero 1480 AM</title>
-
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom, #00b4db, #0083b0);
+      background: linear-gradient(to bottom, #0099ff, #66ccff);
       color: white;
       text-align: center;
       display: flex;
@@ -23,88 +21,74 @@
     }
 
     header {
-      padding: 2rem 1rem 1rem;
+      padding: 2rem;
     }
 
     header h1 {
-      margin: 0;
       font-size: 2.2rem;
+      margin: 0;
     }
 
     header p {
       font-size: 1.1rem;
-      margin-top: 0.5rem;
-      font-style: italic;
+      margin: 0.5rem 0 0;
+      color: #e0f7ff;
     }
 
-    .player-container {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-    }
-
-    iframe {
-      width: 90%;
-      max-width: 400px;
-      height: 150px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    .logo {
+      width: 150px;
+      height: auto;
+      margin: 1rem auto;
     }
 
     footer {
+      margin-top: auto;
       padding: 1rem;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .btn-facebook {
-      background-color: #3b5998;
+    .social {
+      margin-top: 1rem;
+    }
+
+    .social a {
       color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
     }
 
-    .btn-facebook:hover {
-      background-color: #2d4373;
+    .player {
+      margin: 2rem 0;
     }
 
-    @media (max-width: 480px) {
-      header h1 { font-size: 1.6rem; }
-      header p { font-size: 1rem; }
+    .player iframe {
+      width: 90%;
+      max-width: 300px;
+      height: 60px;
+      border: none;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo-512.png" alt="Logo Radio Rodadero" class="logo" />
     <h1>Radio Rodadero 1480 AM</h1>
     <p>¡La emisora que llevas en tu corazón!</p>
   </header>
 
-  <div class="player-container">
-    <iframe src="https://server1.intermediacolombia.com/cp/widgets/player/?p=8132&type=rain" allow="autoplay"></iframe>
+  <div class="player">
+    <iframe src="https://your-streaming-link.com/stream" allow="autoplay"></iframe>
+  </div>
+
+  <div class="social">
+    <p>Síguenos en <a href="https://www.facebook.com/RadioRodadero" target="_blank">Facebook</a></p>
   </div>
 
   <footer>
-    <a class="btn-facebook" href="https://www.facebook.com/RadioRodadero" target="_blank">
-      Visita nuestro Facebook
-    </a>
+    Santa Marta, Magdalena &copy; 2025
   </footer>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js')
-        .then(function(reg) {
-          console.log('Service Worker registrado!', reg);
-        })
-        .catch(function(err) {
-          console.log('Service Worker fallo 😢', err);
-        });
-    }
-  </script>
 </body>
 </html>
+
