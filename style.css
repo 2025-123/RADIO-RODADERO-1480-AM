@@ -1,0 +1,30 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e8f6fd;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.logo {
+  width: 200px;
+  border-radius: 50%;
+}
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #f90;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
