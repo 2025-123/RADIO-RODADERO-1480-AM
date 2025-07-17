@@ -11,7 +11,18 @@
   <link rel="stylesheet" href="style.css" />
   <title>Radio Rodadero 1480 AM</title>
 </head>
-<body>
+<body><script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(function(reg) {
+        console.log('Service Worker registrado!', reg);
+      })
+      .catch(function(err) {
+        console.log('Service Worker fallo 😢', err);
+      });
+  }
+</script>
+
   <div class="container">
     <img src="logo.jpg" alt="Radio Rodadero Logo" class="logo" />
     <h1>Radio Rodadero 1480 AM</h1>
