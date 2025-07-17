@@ -1,18 +1,22 @@
-
-self.addEventListener('install', e => {
+// service-worker.js
+self.addEventListener('install', function(e) {
+  console.log('Service Worker: Installed');
   e.waitUntil(
-    caches.open('radio-rodadero-cache').then(cache => {
+    caches.open('radio-cache').then(function(cache) {
       return cache.addAll([
         './',
         './index.html',
-        './style.css',
-        './logo.jpg'
+        './logo-192.png',
+        './logo-512.png',
       ]);
     })
   );
 });
-self.addEventListener('fetch', e => {
+
+self.addEventListener('fetch', function(e) {
   e.respondWith(
-    caches.match(e.request).then(response => response || fetch(e.request))
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
   );
 });
