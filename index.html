@@ -2,28 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Radio Rodadero 1480 AM</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="logo.png" />
 </head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="Radio Rodadero Logo" class="logo"/>
+    <img src="logo.png" alt="Radio Rodadero" class="logo" />
     <h1>Radio Rodadero 1480 AM</h1>
     <p class="slogan">¡La emisora que llevas en tu corazón!</p>
 
-    <iframe
-      src="https://server1.intermediacolombia.com/cp/widgets/player/?p=8132&type=rain"
-      width="300"
-      height="150"
-      frameborder="0"
-      allow="autoplay"
-      scrolling="no"
-      style="border-radius: 10px; margin: 20px 0;">
-    </iframe>
+    <div class="player-wrapper">
+      <iframe
+        class="player"
+        src="https://server1.intermediacolombia.com/cp/widgets/player/?p=8132&type=rain"
+        allow="autoplay"
+      ></iframe>
+    </div>
 
-    <a href="https://www.facebook.com" target="_blank" class="btn">Síguenos en Facebook</a>
-    <footer>Santa Marta, Magdalena © 2025</footer>
+    <a class="facebook" href="https://facebook.com/RadioRodadero" target="_blank">
+      Visítanos en Facebook
+    </a>
+
+    <footer>
+      Santa Marta, Magdalena · Radio Rodadero 1480 AM © 2025
+    </footer>
   </div>
+
+  <script src="service-worker.js"></script>
 </body>
 </html>
