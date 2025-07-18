@@ -1,30 +1,48 @@
-
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #e8f6fd;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
 }
 .container {
-  text-align: center;
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  min-height: 100vh;
 }
 .logo {
-  width: 200px;
-  border-radius: 50%;
+  width: 100px;
+  margin-bottom: 1rem;
 }
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #f90;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
+.slogan {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 2rem;
+}
+.player-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.player {
+  width: 100%;
+  max-width: 400px;
+  height: 160px;
+  border: none;
+}
+.facebook {
+  display: inline-block;
+  margin-top: 2rem;
+  background: #3b5998;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #eee;
 }
