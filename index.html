@@ -2,74 +2,31 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0077be" />
-  <title>Radio Rodadero 1480 AM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="logo.png" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      text-align: center;
-    }
-    .overlay {
-      background-color: rgba(0, 51, 102, 0.7);
-      min-height: 100vh;
-      padding: 20px;
-    }
-    .logo {
-      width: 150px;
-      margin-top: 20px;
-      border-radius: 50%;
-    }
-    h1 {
-      font-size: 2em;
-      margin-top: 10px;
-    }
-    p {
-      font-size: 1.2em;
-      color: #ffcc00;
-      font-weight: bold;
-    }
-    iframe {
-      width: 90%;
-      max-width: 400px;
-      height: 120px;
-      border: none;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-    .facebook-button {
-      background-color: #3b5998;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      display: inline-block;
-      margin: 25px 0;
-    }
-    footer {
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #ccc;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <title>Radio Rodadero 1480 AM</title>
 </head>
 <body>
-  <div class="overlay">
+  <div class="container">
     <img src="logo.png" alt="Radio Rodadero Logo" class="logo" />
     <h1>Radio Rodadero 1480 AM</h1>
-    <p>¡La emisora que llevas en tu corazón!</p>
-    <iframe src="https://server1.intermediacolombia.com/cp/widgets/player/?p=8132&type=rain" allow="autoplay"></iframe>
-    <br />
-    <a href="https://www.facebook.com/RadioRodadero" class="facebook-button" target="_blank">Síguenos en Facebook</a>
+    <p class="slogan">¡La emisora que llevas en tu corazón!</p>
+
+    <!-- 🎧 Reproductor único -->
+    <div class="player-wrapper">
+      <iframe 
+        src="https://server1.intermediacolombia.com/cp/widgets/player/?p=8132&type=rain" 
+        allow="autoplay" 
+        frameborder="0" 
+        class="player">
+      </iframe>
+    </div>
+
+    <a class="facebook" href="https://facebook.com/RadioRodadero" target="_blank">
+      Síguenos en Facebook
+    </a>
     <footer>Santa Marta, Magdalena © 2025</footer>
   </div>
 </body>
 </html>
-
